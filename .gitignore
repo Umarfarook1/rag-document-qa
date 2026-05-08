@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Test / lint / type caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Indexes / embeddings (regenerated)
+index/
+indexes/
+*.faiss
+*.pkl
+*.npy
+chroma/
+.chroma/
+
+# Document corpora (size + license risk)
+docs/
+corpora/
+*.pdf
+
+# Logs + temp
+*.log
+*.tmp
+
+# Environment + secrets (never commit)
+.env*
+!.env.example
+*.key
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
