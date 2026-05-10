@@ -31,6 +31,10 @@ docs/
 corpora/
 *.pdf
 
+# Project caches (regenerated)
+.cache/
+evals/last_report.json
+
 # Logs + temp
 *.log
 *.tmp
