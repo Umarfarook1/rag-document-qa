@@ -17,18 +17,17 @@ env/
 .coverage
 htmlcov/
 
-# Indexes / embeddings (regenerated)
-index/
-indexes/
+# Indexes / embeddings (regenerated; root-level dirs only, not src/.../index/)
+/index/
+/indexes/
 *.faiss
 *.pkl
 *.npy
-chroma/
-.chroma/
+/chroma/
+/.chroma/
 
-# Document corpora (size + license risk)
-docs/
-corpora/
+# Document corpora (size + license risk; root-level only, not src/.../docs/)
+/corpora/
 *.pdf
 
 # Project caches (regenerated)
