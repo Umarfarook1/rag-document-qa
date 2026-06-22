@@ -50,6 +50,7 @@ class AnthropicAnswerGenerator:
         confidence_config: ConfidenceConfig | None = None,
         max_tokens: int = 1024,
     ) -> None:
+        """Init."""
         try:
             import anthropic
         except ImportError as e:
