@@ -81,6 +81,7 @@ class AnthropicAnswerGenerator:
         question: Question,
         retrieved: list[RetrievedChunk],
     ) -> AnswerResult:
+        """Generate."""
         if not retrieved:
             return AnswerResult(
                 text="I couldn't find any relevant context.",
