@@ -73,6 +73,7 @@ class AnthropicAnswerGenerator:
 
     @property
     def name(self) -> str:
+        """Name."""
         return f"anthropic:{self._model_id}"
 
     def generate(
