@@ -160,6 +160,7 @@ class AnthropicAnswerGenerator:
 
 
 def _format_context(retrieved: list[RetrievedChunk]) -> str:
+    """Format context."""
     lines: list[str] = []
     for r in retrieved:
         lines.append(f"[{r.chunk.id}] (score={r.score:.3f})")
