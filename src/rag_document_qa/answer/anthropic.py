@@ -142,6 +142,7 @@ class AnthropicAnswerGenerator:
         )
 
     def _call(self, user_msg: str) -> str:
+        """Call."""
         try:
             response: Any = self._client.messages.create(
                 model=self._model_id,
