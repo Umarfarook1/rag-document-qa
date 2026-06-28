@@ -20,6 +20,7 @@ FakeMode = Literal["echo_first", "no_citation", "low_confidence", "raises"]
 
 
 class FakeAnswerGenerator:
+    """Fake Answer Generator."""
     def __init__(self, mode: FakeMode = "echo_first") -> None:
         self._mode = mode
 
