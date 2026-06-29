@@ -27,6 +27,7 @@ class FakeAnswerGenerator:
 
     @property
     def name(self) -> str:
+        """Name."""
         return f"fake-{self._mode}"
 
     def generate(
