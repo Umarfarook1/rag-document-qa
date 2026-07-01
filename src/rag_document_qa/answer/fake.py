@@ -35,6 +35,7 @@ class FakeAnswerGenerator:
         question: Question,
         retrieved: list[RetrievedChunk],
     ) -> AnswerResult:
+        """Generate."""
         if self._mode == "raises":
             raise RagError(
                 code="answer_generation_failed",
