@@ -35,6 +35,7 @@ class ChunkConfig:
 
 
 class RecursiveTextSplitter:
+    """Recursive Text Splitter."""
     def __init__(self, config: ChunkConfig | None = None) -> None:
         self._cfg = config or ChunkConfig()
         if self._cfg.chunk_size <= 0:
