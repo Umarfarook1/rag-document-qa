@@ -123,7 +123,6 @@ rag-document-qa/
 │   │   └── faiss.py
 │   ├── loaders/
 │   │   ├── text.py
-│   │   ├── markdown.py
 │   │   ├── pdf.py
 │   │   └── edgar.py
 │   ├── answer/
@@ -157,25 +156,3 @@ MIT, see [`LICENSE`](LICENSE).
 
 **Umarfarook Gurramkonda** &middot; AI Engineer
 [GitHub](https://github.com/Umarfarook1) &middot; [Portfolio](https://umarfarook-ai.vercel.app)
-
-## Installation
-
-```bash
-git clone https://github.com/Umarfarook1/rag-document-qa
-cd rag-document-qa
-pip install -r requirements.txt
-```
-
-## Usage
-
-Basic usage of rag-document-qa:
-
-```bash
-python -m rag-document-qa --help
-```
-
-## Roadmap
-
-- [ ] Core functionality
-- [ ] Tests and CI
-- [ ] Documentation and examples
