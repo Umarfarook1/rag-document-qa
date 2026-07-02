@@ -23,7 +23,21 @@ def _mk_chunk(i: int, text: str) -> Chunk:
 
 
 def test_implements_protocol() -> None:
-    assert isinstance(InMemoryVectorIndex(), VectorIndex)
+    # Check a *built* index: on Python 3.11 a runtime_checkable isinstance()
+    # invokes property getters, and `metadata` raises RagError before build()
+    # (3.12+ uses inspect.getattr_static and doesn't trigger the getter).
+    e = FakeEmbedder(dim=8)
+    chunks = [_mk_chunk(0, "text")]
+    md = IndexMetadata(
+        embedder_name=e.name,
+        embedder_version=e.version,
+        embedding_dim=e.dim,
+        chunk_count=1,
+        index_kind="memory",
+    )
+    idx = InMemoryVectorIndex()
+    idx.build(chunks, e.encode([c.text for c in chunks]), md)
+    assert isinstance(idx, VectorIndex)
 
 
 def test_search_before_build_raises() -> None:
