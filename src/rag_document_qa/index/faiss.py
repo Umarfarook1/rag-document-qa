@@ -98,9 +98,7 @@ class FaissVectorIndex:
         if q.shape[1] != self._metadata.embedding_dim:
             raise RagError(
                 code="embedding_dim_mismatch",
-                message=(
-                    f"query dim {q.shape[1]} != index dim {self._metadata.embedding_dim}"
-                ),
+                message=(f"query dim {q.shape[1]} != index dim {self._metadata.embedding_dim}"),
             )
         if k <= 0:
             return []
@@ -112,9 +110,7 @@ class FaissVectorIndex:
         for rank, (score, i) in enumerate(zip(scores[0], idx[0], strict=True), start=1):
             if i < 0:
                 continue
-            out.append(
-                RetrievedChunk(chunk=self._chunks[int(i)], score=float(score), rank=rank)
-            )
+            out.append(RetrievedChunk(chunk=self._chunks[int(i)], score=float(score), rank=rank))
         return out
 
     def persist(self, path: Path) -> None:

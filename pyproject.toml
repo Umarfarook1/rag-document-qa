@@ -77,7 +77,6 @@ select = ["E", "F", "I", "B", "UP", "N"]
 line-ending = "lf"
 
 [tool.mypy]
-python_version = "3.11"
 strict = true
 files = ["src"]
 

@@ -41,6 +41,7 @@ Rules (MANDATORY):
 
 class AnthropicAnswerGenerator:
     """Anthropic Answer Generator."""
+
     DEFAULT_MODEL = "claude-haiku-4-5"
 
     def __init__(

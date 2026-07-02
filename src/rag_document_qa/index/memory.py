@@ -82,9 +82,7 @@ class InMemoryVectorIndex:
         if query.shape[1] != self._metadata.embedding_dim:
             raise RagError(
                 code="embedding_dim_mismatch",
-                message=(
-                    f"query dim {query.shape[1]} != index dim {self._metadata.embedding_dim}"
-                ),
+                message=(f"query dim {query.shape[1]} != index dim {self._metadata.embedding_dim}"),
             )
         q_norm = float(np.linalg.norm(query))
         if q_norm > 0:
