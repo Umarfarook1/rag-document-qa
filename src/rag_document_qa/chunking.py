@@ -48,6 +48,7 @@ class RecursiveTextSplitter:
             raise ValueError("chunk_overlap must be smaller than chunk_size")
 
     def split(self, document: Document) -> list[Chunk]:
+        """Split."""
         if not document.text:
             return []
         pieces = self._split_recursive(document.text, list(self._cfg.separators))
