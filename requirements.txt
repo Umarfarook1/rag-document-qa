@@ -1,16 +1,9 @@
-langchain>=0.2
-langchain-community>=0.2
-sentence-transformers>=2.7
-faiss-cpu>=1.8
-chromadb>=0.4
-anthropic>=0.40
-openai>=1.30
-pypdf2>=3.0
-pdfplumber>=0.10
-pandas>=2.0
-numpy>=1.24
-fastapi>=0.110
-uvicorn[standard]>=0.27
-streamlit>=1.32
-python-dotenv>=1.0
-pytest>=8.0
+# Dependencies live in pyproject.toml. This file exists for tools that expect a
+# requirements.txt and resolves to the same set, so the two cannot drift.
+#
+# Base install (numpy, pyyaml, anthropic, python-dotenv, httpx). Enough for the
+# fake embedder and the in-memory index:
+-e .
+#
+# For BGE embeddings, FAISS, PDF loaders and the test/lint toolchain:
+#   pip install -e ".[dev,all]"

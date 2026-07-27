@@ -1,7 +1,7 @@
 [project]
 name = "rag-document-qa"
 version = "0.0.1"
-description = "Retrieval-augmented Q&A with measurable retrieval (Recall@K, MRR, nDCG against FinDER on SEC EDGAR)."
+description = "In-development retrieval-augmented Q&A with Protocol seams for vector store, embedder and answer generator, plus a retrieval eval harness (Recall@K, MRR, nDCG) with no benchmark results yet."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
