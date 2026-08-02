@@ -185,3 +185,11 @@ git clone https://github.com/Umarfarook1/rag-document-qa
 cd rag-document-qa
 pip install -r requirements.txt
 ```
+
+## Usage
+
+Basic usage of rag-document-qa:
+
+```bash
+python -m rag-document-qa --help
+```
