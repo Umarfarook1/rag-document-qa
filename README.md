@@ -193,3 +193,9 @@ Basic usage of rag-document-qa:
 ```bash
 python -m rag-document-qa --help
 ```
+
+## Roadmap
+
+- [ ] Core functionality
+- [ ] Tests and CI
+- [ ] Documentation and examples
