@@ -21,6 +21,7 @@ from rag_document_qa.types import Document
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Main."""
     parser = argparse.ArgumentParser(prog="rag-document-qa")
     sub = parser.add_subparsers(dest="cmd")
 
