@@ -137,6 +137,7 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def _cmd_help(_args: argparse.Namespace) -> int:
+    """Cmd help."""
     print(
         "usage: rag-document-qa {ingest,ask,evals} ...\nTry `rag-document-qa --help`.",
         file=sys.stderr,
