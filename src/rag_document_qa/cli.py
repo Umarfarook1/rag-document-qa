@@ -146,6 +146,7 @@ def _cmd_help(_args: argparse.Namespace) -> int:
 
 
 def _cmd_evals_help(_args: argparse.Namespace) -> int:
+    """Cmd evals help."""
     print(
         "usage: rag-document-qa evals run --golden PATH ...\n"
         "Try `rag-document-qa evals run --help`.",
