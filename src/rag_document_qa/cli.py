@@ -156,6 +156,7 @@ def _cmd_evals_help(_args: argparse.Namespace) -> int:
 
 
 def _cmd_ingest(args: argparse.Namespace) -> int:
+    """Cmd ingest."""
     _load_dotenv()
     from rag_document_qa.chunking import split_documents
     from rag_document_qa.types import IndexMetadata
