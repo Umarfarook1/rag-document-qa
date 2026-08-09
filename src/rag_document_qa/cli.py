@@ -187,6 +187,7 @@ def _cmd_ingest(args: argparse.Namespace) -> int:
 
 
 def _cmd_ask(args: argparse.Namespace) -> int:
+    """Cmd ask."""
     _load_dotenv()
     from rag_document_qa.retriever import Retriever, RetrieverConfig
     from rag_document_qa.types import Question
