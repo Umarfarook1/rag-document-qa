@@ -222,6 +222,7 @@ def _cmd_ask(args: argparse.Namespace) -> int:
 
 
 def _cmd_evals_run(args: argparse.Namespace) -> int:
+    """Cmd evals run."""
     _load_dotenv()
     from rag_document_qa.evals.golden_finder import load_finder_jsonl
     from rag_document_qa.evals.report import write_badge, write_report
