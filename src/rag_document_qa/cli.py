@@ -264,6 +264,7 @@ def _cmd_evals_run(args: argparse.Namespace) -> int:
 
 
 def _load_dotenv() -> None:
+    """Load dotenv."""
     try:
         from dotenv import load_dotenv
 
