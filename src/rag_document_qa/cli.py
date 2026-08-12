@@ -274,6 +274,7 @@ def _load_dotenv() -> None:
 
 
 def _gather_documents(tickers: str | None, paths: str | None) -> list[Document]:
+    """Gather documents."""
     from rag_document_qa.loaders.edgar import EdgarLoader
     from rag_document_qa.loaders.pdf import PDFLoader
     from rag_document_qa.loaders.text import MarkdownLoader, TextLoader
