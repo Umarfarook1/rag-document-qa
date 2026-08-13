@@ -297,6 +297,7 @@ def _gather_documents(tickers: str | None, paths: str | None) -> list[Document]:
 
 
 def _build_embedder(kind: str):  # type: ignore[no-untyped-def]
+    """Build embedder."""
     if kind == "fake":
         from rag_document_qa.embed.fake import FakeEmbedder
 
