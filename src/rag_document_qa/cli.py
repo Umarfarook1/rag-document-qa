@@ -308,6 +308,7 @@ def _build_embedder(kind: str):  # type: ignore[no-untyped-def]
 
 
 def _build_index(kind: str):  # type: ignore[no-untyped-def]
+    """Build index."""
     if kind == "memory":
         from rag_document_qa.index.memory import InMemoryVectorIndex
 
