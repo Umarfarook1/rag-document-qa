@@ -319,6 +319,7 @@ def _build_index(kind: str):  # type: ignore[no-untyped-def]
 
 
 def _load_index(kind: str, path: Path):  # type: ignore[no-untyped-def]
+    """Load index."""
     if kind == "memory":
         from rag_document_qa.index.memory import InMemoryVectorIndex
 
