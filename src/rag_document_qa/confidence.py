@@ -28,6 +28,7 @@ DEFAULT_SELF_RATED_THRESHOLD = 6.0  # on a 0-10 scale
 
 @dataclass(frozen=True, slots=True)
 class ConfidenceConfig:
+    """Confidence Config."""
     cosine_threshold: float = DEFAULT_COSINE_THRESHOLD
     self_rated_threshold: float = DEFAULT_SELF_RATED_THRESHOLD
 
