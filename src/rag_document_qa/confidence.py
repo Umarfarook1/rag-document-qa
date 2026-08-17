@@ -35,6 +35,7 @@ class ConfidenceConfig:
 
 @dataclass(frozen=True, slots=True)
 class ConfidenceVerdict:
+    """Confidence Verdict."""
     confident: bool
     score: float  # combined score in [0, 1] for downstream display
     reason: str | None  # None when confident; structured reason otherwise
