@@ -27,6 +27,7 @@ class FakeEmbedder:
     """
 
     def __init__(self, dim: int = 16) -> None:
+        """Init."""
         if dim <= 0:
             raise ValueError(f"dim must be positive, got {dim}")
         self._dim = dim
