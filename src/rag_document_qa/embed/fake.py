@@ -34,6 +34,7 @@ class FakeEmbedder:
 
     @property
     def name(self) -> str:
+        """Name."""
         return "fake-hash-embedder"
 
     @property
