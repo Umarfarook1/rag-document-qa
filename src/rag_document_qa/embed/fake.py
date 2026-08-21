@@ -39,6 +39,7 @@ class FakeEmbedder:
 
     @property
     def version(self) -> str:
+        """Version."""
         return "1"
 
     @property
