@@ -48,6 +48,7 @@ class FakeEmbedder:
         return self._dim
 
     def encode(self, texts: list[str]) -> NDArray[np.float32]:
+        """Encode."""
         if not texts:
             return np.zeros((0, self._dim), dtype=np.float32)
         rows: list[NDArray[np.float32]] = []
