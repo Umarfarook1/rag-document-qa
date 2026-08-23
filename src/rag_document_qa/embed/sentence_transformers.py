@@ -29,6 +29,7 @@ class SentenceTransformersEmbedder:
         device: str | None = None,
         batch_size: int = 32,
     ) -> None:
+        """Init."""
         try:
             from sentence_transformers import SentenceTransformer
         except ImportError as e:
