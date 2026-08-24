@@ -47,6 +47,7 @@ class SentenceTransformersEmbedder:
 
     @property
     def name(self) -> str:
+        """Name."""
         return self._model_name
 
     @property
