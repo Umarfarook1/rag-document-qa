@@ -54,6 +54,7 @@ class SentenceTransformersEmbedder:
     def version(self) -> str:
         # SentenceTransformers doesn't expose a version per model; fall back to
         # the model name's tail (e.g. "v1.5" for bge-small-en-v1.5).
+        """Version."""
         tail = self._model_name.rsplit("-", 1)[-1]
         return tail if tail else "unknown"
 
