@@ -60,6 +60,7 @@ class SentenceTransformersEmbedder:
 
     @property
     def dim(self) -> int:
+        """Dim."""
         return self._dim
 
     def encode(self, texts: list[str]) -> NDArray[np.float32]:
