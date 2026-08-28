@@ -44,6 +44,7 @@ class RagError(Exception):
         message: str,
         details: dict[str, object] | None = None,
     ) -> None:
+        """Init."""
         super().__init__(message)
         self.code: ErrorCode = code
         self.message = message
