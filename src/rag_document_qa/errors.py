@@ -51,6 +51,7 @@ class RagError(Exception):
         self.details = details or {}
 
     def to_dict(self) -> dict[str, object]:
+        """To dict."""
         result: dict[str, object] = {"error": self.code, "message": self.message}
         if self.details:
             result["details"] = self.details
