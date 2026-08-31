@@ -51,6 +51,7 @@ def write_badge(
 
 
 def _get_metric(report: EvalReport, metric: str) -> float:
+    """Get metric."""
     if not hasattr(report, metric):
         raise ValueError(
             f"unknown metric {metric!r}; must be one of "
