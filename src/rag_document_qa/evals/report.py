@@ -62,6 +62,7 @@ def _get_metric(report: EvalReport, metric: str) -> float:
 
 
 def _color_for(value: float) -> str:
+    """Color for."""
     if value < 0.30:
         return "red"
     if value < 0.50:
