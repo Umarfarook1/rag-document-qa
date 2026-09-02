@@ -31,6 +31,7 @@ RetrieveFn = Callable[[str], list[RetrievedChunk]]
 
 @dataclass(frozen=True, slots=True)
 class PerQueryResult:
+    """Per Query Result."""
     question_id: str
     nl: str
     gold_doc_id: str
