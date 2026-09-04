@@ -27,6 +27,7 @@ from rag_document_qa.types import Chunk, IndexMetadata, RetrievedChunk
 
 
 class FaissVectorIndex:
+    """Faiss Vector Index."""
     def __init__(self) -> None:
         self._chunks: list[Chunk] = []
         self._metadata: IndexMetadata | None = None
