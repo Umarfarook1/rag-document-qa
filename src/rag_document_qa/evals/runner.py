@@ -48,6 +48,7 @@ class PerQueryResult:
 
 @dataclass(frozen=True, slots=True)
 class EvalReport:
+    """Eval Report."""
     total: int
     recall_at_1: float
     recall_at_5: float
