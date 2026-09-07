@@ -37,6 +37,7 @@ class FaissVectorIndex:
 
     @staticmethod
     def _import_faiss() -> Any:
+        """Import faiss."""
         try:
             import faiss
         except ImportError as e:
