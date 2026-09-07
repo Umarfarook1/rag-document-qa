@@ -49,6 +49,7 @@ class FaissVectorIndex:
 
     @property
     def metadata(self) -> IndexMetadata:
+        """Metadata."""
         if self._metadata is None:
             raise RagError(code="index_not_built", message="index has not been built yet")
         return self._metadata
