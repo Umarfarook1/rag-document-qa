@@ -60,6 +60,7 @@ class FaissVectorIndex:
         embeddings: NDArray[np.float32],
         metadata: IndexMetadata,
     ) -> None:
+        """Build."""
         if not chunks:
             raise RagError(code="corpus_empty", message="cannot build an index from zero chunks")
         if embeddings.shape[0] != len(chunks):
