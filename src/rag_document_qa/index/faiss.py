@@ -93,6 +93,7 @@ class FaissVectorIndex:
         query_embedding: NDArray[np.float32],
         k: int,
     ) -> list[RetrievedChunk]:
+        """Search."""
         if self._index is None or self._metadata is None:
             raise RagError(code="index_not_built", message="search() called before build()")
         q = (
