@@ -133,6 +133,7 @@ class FaissVectorIndex:
 
     @classmethod
     def load(cls, path: Path) -> FaissVectorIndex:
+        """Load."""
         sidecar_path = path / "index.json"
         index_path = path / "embeddings.faiss"
         if not sidecar_path.exists() or not index_path.exists():
