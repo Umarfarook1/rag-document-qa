@@ -27,6 +27,7 @@ class InMemoryVectorIndex:
     """
 
     def __init__(self) -> None:
+        """Init."""
         self._chunks: list[Chunk] = []
         self._embeddings: NDArray[np.float32] | None = None
         self._metadata: IndexMetadata | None = None
