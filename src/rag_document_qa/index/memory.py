@@ -76,6 +76,7 @@ class InMemoryVectorIndex:
         query_embedding: NDArray[np.float32],
         k: int,
     ) -> list[RetrievedChunk]:
+        """Search."""
         if self._embeddings is None or self._metadata is None:
             raise RagError(code="index_not_built", message="search() called before build()")
         if query_embedding.ndim == 1:
