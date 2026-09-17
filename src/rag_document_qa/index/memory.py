@@ -108,6 +108,7 @@ class InMemoryVectorIndex:
         ]
 
     def persist(self, path: Path) -> None:
+        """Persist."""
         if self._embeddings is None or self._metadata is None:
             raise RagError(code="index_not_built", message="persist() called before build()")
         path.mkdir(parents=True, exist_ok=True)
