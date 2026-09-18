@@ -121,6 +121,7 @@ class InMemoryVectorIndex:
 
     @classmethod
     def load(cls, path: Path) -> InMemoryVectorIndex:
+        """Load."""
         sidecar_path = path / "index.json"
         emb_path = path / "embeddings.npz"
         if not sidecar_path.exists() or not emb_path.exists():
