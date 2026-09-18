@@ -53,6 +53,7 @@ class EdgarLoader:
         timeout_s: float = DEFAULT_TIMEOUT_S,
         cache_dir: Path | None = None,
     ) -> None:
+        """Init."""
         ua = user_agent or os.environ.get("SEC_USER_AGENT")
         if not ua:
             raise RagError(
