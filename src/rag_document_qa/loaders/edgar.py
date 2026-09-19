@@ -73,6 +73,7 @@ class EdgarLoader:
 
     @property
     def name(self) -> str:
+        """Name."""
         return "edgar"
 
     def load(self, source: str) -> list[Document]:
