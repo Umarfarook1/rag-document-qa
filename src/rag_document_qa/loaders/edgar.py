@@ -113,6 +113,7 @@ class EdgarLoader:
         ]
 
     def _lookup_cik(self, ticker: str) -> str:
+        """Lookup cik."""
         if self._ticker_map is None:
             payload = self._fetch_json(EDGAR_TICKER_MAP_URL)
             mapping: dict[str, str] = {}
