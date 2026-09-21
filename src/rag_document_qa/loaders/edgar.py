@@ -134,6 +134,7 @@ class EdgarLoader:
         return cik
 
     def _latest_10k(self, cik: str) -> tuple[str, str] | None:
+        """Latest 10k."""
         url = EDGAR_SUBMISSIONS_URL.format(cik=cik)
         payload = self._fetch_json(url)
         recent = payload.get("filings", {}).get("recent", {})
