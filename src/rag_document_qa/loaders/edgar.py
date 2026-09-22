@@ -147,6 +147,7 @@ class EdgarLoader:
         return None
 
     def _fetch_json(self, url: str) -> dict[str, Any]:
+        """Fetch json."""
         result: Any = self._cached_get(url, parse_json=True)
         if not isinstance(result, dict):
             raise RagError(
