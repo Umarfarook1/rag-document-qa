@@ -162,6 +162,7 @@ class EdgarLoader:
         return str(result)
 
     def _cached_get(self, url: str, parse_json: bool) -> Any:
+        """Cached get."""
         cached_payload = self._cache_get(url)
         if cached_payload is not None:
             if parse_json:
