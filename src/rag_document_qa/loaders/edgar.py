@@ -157,6 +157,7 @@ class EdgarLoader:
         return result
 
     def _fetch_text(self, url: str) -> str:
+        """Fetch text."""
         result: Any = self._cached_get(url, parse_json=False)
         return str(result)
 
