@@ -201,6 +201,7 @@ class EdgarLoader:
         return body
 
     def _cache_path(self, url: str) -> Path | None:
+        """Cache path."""
         if self._cache_dir is None:
             return None
         # Map URL to a filesystem-safe filename
