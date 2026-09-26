@@ -209,6 +209,7 @@ class EdgarLoader:
         return self._cache_dir / safe
 
     def _cache_get(self, url: str) -> str | None:
+        """Cache get."""
         p = self._cache_path(url)
         if p is None or not p.exists():
             return None
