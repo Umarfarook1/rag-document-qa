@@ -216,6 +216,7 @@ class EdgarLoader:
         return p.read_text(encoding="utf-8")
 
     def _cache_put(self, url: str, body: str) -> None:
+        """Cache put."""
         p = self._cache_path(url)
         if p is None:
             return
