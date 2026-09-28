@@ -25,6 +25,7 @@ class RetrieverConfig:
 
 
 class Retriever:
+    """Retriever."""
     def __init__(
         self,
         embedder: Embedder,
