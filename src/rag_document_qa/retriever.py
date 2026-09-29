@@ -33,6 +33,7 @@ class Retriever:
         reranker: Reranker | None = None,
         config: RetrieverConfig | None = None,
     ) -> None:
+        """Init."""
         self._embedder = embedder
         self._index = index
         self._reranker = reranker
