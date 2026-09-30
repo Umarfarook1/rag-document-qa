@@ -41,6 +41,7 @@ class Retriever:
         self._validate_embedder_matches_index()
 
     def _validate_embedder_matches_index(self) -> None:
+        """Validate embedder matches index."""
         meta = self._index.metadata
         if meta.embedder_name != self._embedder.name:
             raise RagError(
