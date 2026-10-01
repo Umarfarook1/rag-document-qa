@@ -62,6 +62,7 @@ class Retriever:
             )
 
     def retrieve(self, query: str) -> list[RetrievedChunk]:
+        """Retrieve."""
         embeddings = self._embedder.encode([query])
         candidates = self._index.search(embeddings[0], k=self._cfg.top_k_retrieve)
         if self._reranker is not None and candidates:
