@@ -23,6 +23,7 @@ pytestmark = pytest.mark.edgar
 
 @pytest.fixture
 def edgar(tmp_path: Path) -> EdgarLoader:
+    """Edgar."""
     if not os.environ.get("SEC_USER_AGENT"):
         pytest.skip("SEC_USER_AGENT env var not set")
     return EdgarLoader(cache_dir=tmp_path / "edgar_cache")
