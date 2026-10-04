@@ -30,6 +30,7 @@ def edgar(tmp_path: Path) -> EdgarLoader:
 
 
 def test_fetch_aapl_10k(edgar: EdgarLoader) -> None:
+    """Test fetch aapl 10k."""
     docs = edgar.load("AAPL")
     assert len(docs) == 1
     doc = docs[0]
