@@ -12,6 +12,7 @@ from rag_document_qa.types import Chunk, RetrievedChunk
 
 
 def _retrieved(n: int) -> list[RetrievedChunk]:
+    """Retrieved."""
     return [
         RetrievedChunk(
             chunk=Chunk(
