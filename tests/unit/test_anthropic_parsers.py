@@ -32,6 +32,7 @@ def _retrieved(n: int) -> list[RetrievedChunk]:
 
 
 def test_parse_citations_basic() -> None:
+    """Test parse citations basic."""
     text = "The number was X [chunk_1] and Y [chunk_3]."
     ids = _parse_citations(text, _retrieved(5))
     assert ids == ["id_0", "id_2"]
