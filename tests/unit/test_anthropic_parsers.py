@@ -39,6 +39,7 @@ def test_parse_citations_basic() -> None:
 
 
 def test_parse_citations_dedupes_repeated_refs() -> None:
+    """Test parse citations dedupes repeated refs."""
     text = "Used [chunk_1] and again [chunk_1] elsewhere [chunk_2]."
     ids = _parse_citations(text, _retrieved(3))
     assert ids == ["id_0", "id_1"]
