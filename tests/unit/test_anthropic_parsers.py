@@ -53,6 +53,7 @@ def test_parse_citations_ignores_out_of_range_refs() -> None:
 
 
 def test_parse_citations_empty_when_none_present() -> None:
+    """Test parse citations empty when none present."""
     text = "Plain answer with no references."
     assert _parse_citations(text, _retrieved(3)) == []
 
