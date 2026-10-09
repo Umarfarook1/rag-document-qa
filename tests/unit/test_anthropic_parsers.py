@@ -66,6 +66,7 @@ def test_parse_citations_case_insensitive() -> None:
 
 
 def test_parse_self_rated_takes_last_match() -> None:
+    """Test parse self rated takes last match."""
     text = "This is the answer.\nConfidence: 8/10"
     assert _parse_self_rated(text) == 8.0
 
