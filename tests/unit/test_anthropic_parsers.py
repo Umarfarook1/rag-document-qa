@@ -59,6 +59,7 @@ def test_parse_citations_empty_when_none_present() -> None:
 
 
 def test_parse_citations_case_insensitive() -> None:
+    """Test parse citations case insensitive."""
     text = "Cite [Chunk_2]."
     ids = _parse_citations(text, _retrieved(3))
     assert ids == ["id_1"]
