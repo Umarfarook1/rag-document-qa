@@ -72,6 +72,7 @@ def test_parse_self_rated_takes_last_match() -> None:
 
 
 def test_parse_self_rated_with_decimal() -> None:
+    """Test parse self rated with decimal."""
     text = "Confidence: 7.5"
     assert _parse_self_rated(text) == 7.5
 
