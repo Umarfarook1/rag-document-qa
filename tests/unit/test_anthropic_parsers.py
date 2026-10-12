@@ -83,5 +83,6 @@ def test_parse_self_rated_missing_returns_none() -> None:
 
 
 def test_parse_self_rated_takes_last_when_multiple() -> None:
+    """The function is a test function (as it uses `assert` and returns `None`)."""
     text = "Confidence: 3 .. but actually Confidence: 9"
     assert _parse_self_rated(text) == 9.0
