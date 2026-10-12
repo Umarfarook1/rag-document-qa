@@ -78,6 +78,7 @@ def test_parse_self_rated_with_decimal() -> None:
 
 
 def test_parse_self_rated_missing_returns_none() -> None:
+    """Test parse self rated missing returns none."""
     assert _parse_self_rated("nothing here") is None
 
 
