@@ -11,6 +11,7 @@ from rag_document_qa.types import Document
 
 
 def test_chunk_config_validates() -> None:
+    """Test chunk config validates."""
     with pytest.raises(ValueError, match="positive"):
         RecursiveTextSplitter(ChunkConfig(chunk_size=0))
     with pytest.raises(ValueError, match="non-negative"):
