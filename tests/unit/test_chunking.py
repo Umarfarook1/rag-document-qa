@@ -1,3 +1,4 @@
+"""Test chunking module."""
 import pytest
 
 from rag_document_qa.chunking import (
