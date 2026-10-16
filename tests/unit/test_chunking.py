@@ -21,6 +21,7 @@ def test_chunk_config_validates() -> None:
 
 
 def test_split_empty_document_returns_empty() -> None:
+    """Test split empty document returns empty."""
     s = RecursiveTextSplitter()
     assert s.split(Document(id="d", source="s", text="", metadata={})) == []
 
