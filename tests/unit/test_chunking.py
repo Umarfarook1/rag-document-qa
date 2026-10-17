@@ -27,6 +27,7 @@ def test_split_empty_document_returns_empty() -> None:
 
 
 def test_split_short_document_returns_one_chunk() -> None:
+    """Test split short document returns one chunk."""
     s = RecursiveTextSplitter(ChunkConfig(chunk_size=1024))
     out = s.split(Document(id="d", source="s", text="short text", metadata={}))
     assert len(out) == 1
