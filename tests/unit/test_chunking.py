@@ -38,6 +38,7 @@ def test_split_short_document_returns_one_chunk() -> None:
 
 
 def test_split_long_document_produces_multiple_chunks() -> None:
+    """Test split long document produces multiple chunks."""
     s = RecursiveTextSplitter(ChunkConfig(chunk_size=50, chunk_overlap=10))
     text = "para1.\n\npara2 is a longer paragraph than the first.\n\npara3 caps it off."
     out = s.split(Document(id="d", source="s", text=text, metadata={}))
