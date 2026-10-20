@@ -50,6 +50,7 @@ def test_split_long_document_produces_multiple_chunks() -> None:
 
 
 def test_split_metadata_propagates_to_chunks() -> None:
+    """Test split metadata propagates to chunks."""
     s = RecursiveTextSplitter(ChunkConfig(chunk_size=100, chunk_overlap=0))
     doc = Document(
         id="d",
