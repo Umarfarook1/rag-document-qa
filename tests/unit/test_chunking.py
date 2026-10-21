@@ -74,6 +74,7 @@ def test_split_chunk_offsets_index_back_into_source() -> None:
 
 
 def test_split_documents_rejects_empty_list() -> None:
+    """Test split documents rejects empty list."""
     with pytest.raises(RagError) as info:
         split_documents([])
     assert info.value.code == "corpus_empty"
