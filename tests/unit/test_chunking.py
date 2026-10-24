@@ -81,6 +81,7 @@ def test_split_documents_rejects_empty_list() -> None:
 
 
 def test_split_documents_aggregates() -> None:
+    """Test split documents aggregates."""
     docs = [
         Document(id="a", source="s", text="alpha text", metadata={}),
         Document(id="b", source="s", text="beta text", metadata={}),
