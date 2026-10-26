@@ -1,3 +1,4 @@
+"""Test cli module."""
 import pytest
 
 from rag_document_qa.cli import main
