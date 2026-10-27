@@ -16,6 +16,7 @@ def test_cli_help_lists_subcommands(capsys: pytest.CaptureFixture[str]) -> None:
 
 
 def test_cli_no_args_prints_hint(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli no args prints hint."""
     rc = main([])
     err = capsys.readouterr().err
     assert rc == 1
