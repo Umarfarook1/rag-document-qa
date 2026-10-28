@@ -24,6 +24,7 @@ def test_cli_no_args_prints_hint(capsys: pytest.CaptureFixture[str]) -> None:
 
 
 def test_cli_evals_without_subcommand_prints_hint(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli evals without subcommand prints hint."""
     rc = main(["evals"])
     err = capsys.readouterr().err
     assert rc == 1
