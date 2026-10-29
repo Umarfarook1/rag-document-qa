@@ -32,6 +32,7 @@ def test_cli_evals_without_subcommand_prints_hint(capsys: pytest.CaptureFixture[
 
 
 def test_cli_ingest_no_inputs_returns_error(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli ingest no inputs returns error."""
     rc = main(["ingest"])
     err = capsys.readouterr().err
     assert rc == 2
