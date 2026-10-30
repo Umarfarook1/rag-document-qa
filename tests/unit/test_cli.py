@@ -40,6 +40,7 @@ def test_cli_ingest_no_inputs_returns_error(capsys: pytest.CaptureFixture[str]) 
 
 
 def test_cli_ingest_help(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli ingest help."""
     with pytest.raises(SystemExit) as exc:
         main(["ingest", "--help"])
     assert exc.value.code == 0
