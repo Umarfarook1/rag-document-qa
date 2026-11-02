@@ -61,6 +61,7 @@ def test_cli_ask_help(capsys: pytest.CaptureFixture[str]) -> None:
 
 
 def test_cli_evals_run_help(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli evals run help."""
     with pytest.raises(SystemExit) as exc:
         main(["evals", "run", "--help"])
     assert exc.value.code == 0
