@@ -32,6 +32,7 @@ def _write_corpus(tmp_path: Path) -> list[Path]:
 
 
 def test_cli_ingest_then_ask_no_llm_e2e(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli ingest then ask no llm e2e."""
     docs = _write_corpus(tmp_path)
     index_dir = tmp_path / "index"
     rc = main(
