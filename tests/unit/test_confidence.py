@@ -1,3 +1,4 @@
+"""Test confidence module."""
 from rag_document_qa.confidence import (
     ConfidenceConfig,
     evaluate_confidence,
