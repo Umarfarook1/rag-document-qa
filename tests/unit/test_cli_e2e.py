@@ -75,6 +75,7 @@ def test_cli_ingest_then_ask_no_llm_e2e(tmp_path: Path, capsys: pytest.CaptureFi
 
 
 def test_cli_evals_run_e2e_with_fakes(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    """Test cli evals run e2e with fakes."""
     docs = _write_corpus(tmp_path)
     index_dir = tmp_path / "index"
     main(
