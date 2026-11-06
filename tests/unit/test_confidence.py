@@ -7,6 +7,7 @@ from rag_document_qa.types import Chunk, RetrievedChunk
 
 
 def _r(score: float, rank: int = 1) -> RetrievedChunk:
+    """R."""
     return RetrievedChunk(
         chunk=Chunk(
             id=f"c{rank}",
