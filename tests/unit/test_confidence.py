@@ -24,6 +24,7 @@ def _r(score: float, rank: int = 1) -> RetrievedChunk:
 
 
 def test_no_retrieval_is_unconfident() -> None:
+    """Test no retrieval is unconfident."""
     v = evaluate_confidence([], self_rated=9.0)
     assert v.confident is False
     assert v.reason == "no_chunks_retrieved"
