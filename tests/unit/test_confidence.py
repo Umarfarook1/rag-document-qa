@@ -31,6 +31,7 @@ def test_no_retrieval_is_unconfident() -> None:
 
 
 def test_top1_below_threshold_is_unconfident() -> None:
+    """Test top1 below threshold is unconfident."""
     v = evaluate_confidence([_r(0.3)], self_rated=9.0)
     assert v.confident is False
     assert v.reason == "top1_below_cosine_threshold"
