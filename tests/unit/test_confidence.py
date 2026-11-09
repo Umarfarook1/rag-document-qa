@@ -38,6 +38,7 @@ def test_top1_below_threshold_is_unconfident() -> None:
 
 
 def test_self_rated_below_threshold_is_unconfident() -> None:
+    """Test self rated below threshold is unconfident."""
     v = evaluate_confidence([_r(0.9)], self_rated=4.0)
     assert v.confident is False
     assert v.reason == "model_self_rated_below_threshold"
