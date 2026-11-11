@@ -52,6 +52,7 @@ def test_self_rated_missing_is_unconfident() -> None:
 
 
 def test_both_gates_pass() -> None:
+    """Test both gates pass."""
     v = evaluate_confidence([_r(0.9)], self_rated=8.0)
     assert v.confident is True
     assert v.reason is None
