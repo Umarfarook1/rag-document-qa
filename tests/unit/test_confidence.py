@@ -61,6 +61,7 @@ def test_both_gates_pass() -> None:
 
 
 def test_thresholds_are_configurable() -> None:
+    """Test thresholds are configurable."""
     cfg = ConfidenceConfig(cosine_threshold=0.95, self_rated_threshold=8.5)
     v = evaluate_confidence([_r(0.9)], self_rated=9.0, config=cfg)
     assert v.confident is False  # cosine 0.9 < 0.95
