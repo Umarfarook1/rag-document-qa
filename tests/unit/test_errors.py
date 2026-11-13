@@ -1,3 +1,4 @@
+"""Test errors module."""
 import pytest
 
 from rag_document_qa.errors import (
