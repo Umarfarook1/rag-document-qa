@@ -8,6 +8,7 @@ from rag_document_qa.errors import (
 
 
 def test_rag_error_minimal() -> None:
+    """Test rag error minimal."""
     err = RagError(code="corpus_empty", message="no documents loaded")
     assert err.code == "corpus_empty"
     assert err.message == "no documents loaded"
