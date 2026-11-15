@@ -16,6 +16,7 @@ def test_rag_error_minimal() -> None:
 
 
 def test_rag_error_with_details() -> None:
+    """Test rag error with details."""
     err = RagError(
         code="embedder_mismatch",
         message="index built with bge-small but query embedder is openai",
