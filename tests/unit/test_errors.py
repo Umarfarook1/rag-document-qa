@@ -26,6 +26,7 @@ def test_rag_error_with_details() -> None:
 
 
 def test_rag_error_to_dict_shape() -> None:
+    """Test rag error to dict shape."""
     err = RagError(code="invalid_corpus", message="bad", details={"path": "/x"})
     d = err.to_dict()
     assert d == {"error": "invalid_corpus", "message": "bad", "details": {"path": "/x"}}
