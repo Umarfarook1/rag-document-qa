@@ -33,6 +33,7 @@ def test_rag_error_to_dict_shape() -> None:
 
 
 def test_rag_error_to_dict_omits_empty_details() -> None:
+    """Test rag error to dict omits empty details."""
     err = RagError(code="unknown", message="something")
     d = err.to_dict()
     assert d == {"error": "unknown", "message": "something"}
