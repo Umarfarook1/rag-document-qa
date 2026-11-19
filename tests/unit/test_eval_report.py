@@ -1,3 +1,4 @@
+"""Test eval report module."""
 import json
 from pathlib import Path
 
