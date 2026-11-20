@@ -9,6 +9,7 @@ from rag_document_qa.evals.runner import EvalReport, PerQueryResult
 
 
 def _sample_report(recall_at_5: float = 0.6) -> EvalReport:
+    """Sample report."""
     return EvalReport(
         total=10,
         recall_at_1=0.4,
