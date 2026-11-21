@@ -39,6 +39,7 @@ def _sample_report(recall_at_5: float = 0.6) -> EvalReport:
 
 
 def test_write_report_creates_json(tmp_path: Path) -> None:
+    """Test write report creates json."""
     out = tmp_path / "r.json"
     write_report(_sample_report(), out, retriever_name="bge-faiss")
     data = json.loads(out.read_text())
