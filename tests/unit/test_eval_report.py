@@ -51,6 +51,7 @@ def test_write_report_creates_json(tmp_path: Path) -> None:
 
 
 def test_write_report_creates_parent_dir(tmp_path: Path) -> None:
+    """Test write report creates parent dir."""
     out = tmp_path / "nested" / "deep" / "r.json"
     write_report(_sample_report(), out, retriever_name="x")
     assert out.exists()
