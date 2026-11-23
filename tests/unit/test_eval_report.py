@@ -58,6 +58,7 @@ def test_write_report_creates_parent_dir(tmp_path: Path) -> None:
 
 
 def test_write_badge_produces_shields_endpoint_json(tmp_path: Path) -> None:
+    """Test write badge produces shields endpoint json."""
     out = tmp_path / "badge.json"
     write_badge(_sample_report(), out, retriever_name="bge-faiss")
     data = json.loads(out.read_text())
