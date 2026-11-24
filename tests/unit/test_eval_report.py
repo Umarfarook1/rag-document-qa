@@ -69,6 +69,7 @@ def test_write_badge_produces_shields_endpoint_json(tmp_path: Path) -> None:
 
 
 def test_badge_color_thresholds(tmp_path: Path) -> None:
+    """Test badge color thresholds."""
     cases = [
         (0.10, "red"),
         (0.29, "red"),
