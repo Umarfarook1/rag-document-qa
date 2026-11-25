@@ -90,6 +90,7 @@ def test_badge_color_thresholds(tmp_path: Path) -> None:
 
 
 def test_write_badge_picks_alternate_metric(tmp_path: Path) -> None:
+    """Test write badge picks alternate metric."""
     out = tmp_path / "b.json"
     write_badge(_sample_report(), out, retriever_name="r", metric="mrr")
     data = json.loads(out.read_text())
