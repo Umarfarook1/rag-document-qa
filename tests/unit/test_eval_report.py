@@ -100,6 +100,7 @@ def test_write_badge_picks_alternate_metric(tmp_path: Path) -> None:
 
 
 def test_write_badge_unknown_metric_rejects(tmp_path: Path) -> None:
+    """Test write badge unknown metric rejects."""
     out = tmp_path / "b.json"
     with pytest.raises(ValueError, match="unknown metric"):
         write_badge(_sample_report(), out, retriever_name="r", metric="bogus")
