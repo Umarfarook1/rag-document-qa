@@ -1,3 +1,4 @@
+"""Test eval runner module."""
 import pytest
 
 from rag_document_qa.errors import RagError
